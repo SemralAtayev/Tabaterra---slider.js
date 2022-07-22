@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         // then after click on one slide slide slides dissapeare. initialSlide: num and  .slick("slickGoTo", e.getAttribute("data-slick-index")); should pare each other
 
 
-      // on click to other place rather than div that contains slider or next or prev  button, we destroy and regenerate slider again with default settings getSliderSettingsDefault
+      // on click to other place rather than div that contains slider or next or prev  button, we destroy and regenerate slider again with default settings getSliderSettingsDefault and remove clicked add clicked outside
       window.addEventListener("click", function (e) { 
         if (
           slidersParent.contains(e.target) &&
