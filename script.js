@@ -3,13 +3,14 @@
 document.addEventListener("DOMContentLoaded", function (event) {
   let slidersParent = document.querySelector(".team-items");
   let sliderChildrens = document.querySelectorAll(".single-item");
+ 
 
   console.clear();
 
   
   $(".team-items").slick({ // first init of slider
     slidesToShow: 4,
-    infinite: true,
+    infinite: false,
     slidesToScroll: 1,
     autoplay: false,
     dots: true,
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // go thrue nodelist sliderChildren and awaiting for click or something else
 
   sliderChildrens.forEach((e) => {
+    console.log(e);
     let num = e.getAttribute("data-slick-index"); // index of slide element
     let next = document.querySelector(".slick-next"); // next button
     let prev = document.querySelector(".slick-prev");// prev button
